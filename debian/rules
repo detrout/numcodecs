@@ -1,0 +1,13 @@
+#!/usr/bin/make -f
+
+export PYBUILD_NAME=numcodecs
+%:
+	dh $@ --with python3 --buildsystem=pybuild
+
+override_dh_auto_clean:
+	-rm -rf .pytest_cache
+	dh_auto_clean
+
+#ifeq (,$(filter nocheck,$(DEB_BUILD_OPTIONS)))
+#.PHONY: override_dh_auto_test
+#endif

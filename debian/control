@@ -1,0 +1,29 @@
+Source: numcodecs
+Maintainer: Diane Trout <diane@ghic.org>
+Section: python
+Priority: optional
+Build-Depends: debhelper (>= 12),
+               dh-python,
+               cython3,
+               libblosc-dev,
+               libzstd-dev,
+               liblz4-dev,
+               python3-all-dev,
+               python3-coverage <!nocheck>,
+               python3-flake8 <!nocheck>,
+               python3-msgpack,
+               python3-numpy,
+               python3-pytest <!nocheck>,
+               python3-pytest-cov <!nocheck>,
+               python3-setuptools,
+               python3-setuptools-scm <!nocheck>,
+Standards-Version: 4.2.1
+Homepage: https://github.com/alimanfoo/numcodecs
+
+Package: python3-numcodecs
+Architecture: any
+Depends: ${misc:Depends}, ${python3:Depends}, ${shlibs:Depends}
+Description: provides buffer compression and transformation
+ Numcodecs is a Python package that provides buffer compression and
+ transformation codecs for use in data storage and communication
+ applications.
